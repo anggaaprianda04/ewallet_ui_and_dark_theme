@@ -1,6 +1,5 @@
 import 'package:ewallet_slicing_ui/pages/main_page.dart';
 import 'package:ewallet_slicing_ui/pages/provider/page_provider.dart';
-import 'package:ewallet_slicing_ui/pages/wallet_page.dart';
 import 'package:ewallet_slicing_ui/pages/provider/theme_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

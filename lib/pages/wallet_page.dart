@@ -103,7 +103,7 @@ class WalletPage extends StatelessWidget {
             EdgeInsets.only(left: defaultMargin, right: defaultMargin, top: 16),
         decoration: BoxDecoration(
           color: themeService.darkTheme ? Colors.black54 : Colors.white,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(12),
             topRight: Radius.circular(12),
           ),
@@ -138,7 +138,7 @@ class WalletPage extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(top: 24),
               child: SizedBox(
-                height: 270,
+                height: MediaQuery.of(context).size.height,
                 child: TabBarView(
                   children: [
                     ListView(
@@ -205,13 +205,16 @@ class WalletPage extends StatelessWidget {
         length: 2,
         initialIndex: 0,
         child: Scaffold(
-          body: Column(
-            children: [
-              header(),
-              totalBalance(),
-              menuButtons(),
-              tabBar(),
-            ],
+          body: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                header(),
+                totalBalance(),
+                menuButtons(),
+                tabBar(),
+              ],
+            ),
           ),
         ),
       ),
